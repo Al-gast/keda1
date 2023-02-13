@@ -1,0 +1,250 @@
+{% extends 'base.html' %} {% load static %} {% block content %} 
+    <div>
+        {% comment %} Detail Technologies {% endcomment %}
+        <div class="bg-white md:h-[636px] md:px-10 px-7 md:py-10">
+          <a href="/about-technologies">
+            <div class="md:flex items-center cursor-pointer hidden">
+              <img src="{% static "image/public/iconDetailTechnologiesReverse.svg" %}" alt="" />
+              <p class="ml-2 font-semibold">Kembali ke Teknologi</p>
+            </div>
+          </a>
+          <div class="md:grid grid-cols-5 md:py-28 md:px-10 gap-6">
+            <img
+              src="{% static "image/public/python.svg" %}"
+              alt=""
+              class="w-[409px] col-span-2 pt-16"
+            />
+            <div class="col-span-3 py-5 md:pl-20">
+              <h1 class="text-5xl font-bold mb-5 text-[#333333]">Django Python</h1>
+              <p class="mb-5 text-[#333333] max-w-[555px] leading-relaxed">
+                Dibuat tahun 2003, Django sendiri baru dirilis versi pertamanya
+                tahun 2008. Karena Django adalah suatu kerangka full-stack untuk
+                membuat aplikasi web dengan bahasa pemrograman Python.
+                <br />
+                <br />
+                Sampai di tahun 2019 baru muncul versi keduanya.
+              </p>
+            </div>
+          </div>
+        </div>
+        {% comment %} Aplicate The Technologies {% endcomment %}
+        <div class="bg-[fbfbfb] md:grid grid-cols-2 md:px-20 px-7 md:py-14">
+          <img
+            src="{% static "image/public/howToApplicatedTechnologies3.svg" %}"
+            alt=""
+            class="w-[492px]"
+          />
+          <div class="md:py-10 py-5">
+            <h1 class="md:text-5xl text-3xl font-bold mb-5 text-[#333333] leading-relaxed md:leading-relaxed">
+              Bagaimana penerapan teknologi ini
+            </h1>
+            <p class="mb-5 text-[#333333] leading-relaxed max-w-[555px]">
+              Django juga adalah kerangka kerja python web tingkat tinggi yang
+              dapat melakukan pengembangan aplikasi dengan cepat dan memiliki
+              desain pragmatis yang bersih.
+            </p>
+          </div>
+        </div>
+        {% comment %} Benefit {% endcomment %}
+        <div class="bg-white md:grid grid-cols-2 md:px-20 md:py-10 px-7">
+          <img src="{% static "image/public/whatAdvantage3.svg" %}" alt="" class="w-[492px]" />
+          <div class="md:py-20 py-5">
+            <h1 class="md:text-5xl text-3xl font-bold mb-5 text-[#333333]">Apa keuntungannya</h1>
+            <p class="md:pr-3 text-[#333333] leading-relaxed max-w-[555px]">
+              Django cocok untuk segala ukuran project Anda, mulai dari project
+              kecil sampai yang besar. Django juga memiliki banyak fitur
+              dibandingkan dengan frameworks lainnya, sehingga Django mampu
+              memuat banyak hal yang dibutuhkan untuk mebangun suatu aplikasi.
+            </p>
+          </div>
+        </div>
+        {% comment %} Our Project {% endcomment %}
+        <div class="bg-white hidden md:block">
+          <div class="px-20 py-14 m-0">
+            <h1 class="text-left text-5xl font-bold mb-14 text-[#333333]">Proyek Kami yang memakai Django Python</h1>
+            <div class="md:grid md:grid-cols-3 place-content-center place-items-center hidden">
+              <div class="block w-[326px] h-[587px] py-5 bg-white shadow-gray-500/50 shadow-md hover:shadow-xl hover:shadow-black/30 transition duration-300 cursor-pointer">
+                <div>
+                  <p class="px-6 text-xl font-semibold mb-5">Pengembangan Website</p>
+                </div>
+                <div class="mb-5">
+                  <img src="{% static "image/public/webDeveloping.svg" %}" alt="" class="w-[326px] h-[277px] object-cover object-center"/>
+                </div>
+                <div class="px-7">
+                  <h3 class="text-3xl font-bold mb-3">WayFinder</h3>
+                  <p>Navigasi dalam ruangan yang terintegrasi dengan sistem manajemen gudang. Sehingga meningkatkan efisiensi para pekerjanya.</p>
+                </div>
+              </div>
+              <div class="block w-[326px] h-[587px] py-5 bg-white shadow-gray-500/50 shadow-md hover:shadow-xl hover:shadow-black/30 transition duration-300 cursor-pointer">
+                <div>
+                  <p class="px-6 text-xl font-semibold mb-5">Aplikasi Mobile</p>
+                </div>
+                <div class="mb-5">
+                  <img src="{% static "image/public/mobileApps.svg" %}" alt="" class="w-[326px] h-[277px] object-cover object-center"/>
+                </div>
+                <div class="px-7">
+                  <h3 class="text-3xl font-bold mb-3">AXA</h3>
+                  <p>Sebuah VR interaktif yang memberikan pengalaman mengemudi di kota Anfield.</p>
+                </div>
+              </div>
+              <div class="block w-[326px] h-[587px] py-5 bg-white shadow-gray-500/50 shadow-md hover:shadow-xl hover:shadow-black/30 transition duration-300 cursor-pointer">
+                <div>
+                  <p class="px-6 text-xl font-semibold mb-5">Pengembangan Game</p>
+                </div>
+                <div class="mb-5">
+                  <img src="{% static "image/public/gameDeveloping.svg" %}" alt="" class="w-[326px] h-[277px] object-cover object-center"/>
+                </div>
+                <div class="px-7">
+                  <h3 class="text-3xl font-bold mb-3">Container Loader</h3>
+                  <p>Sebuah software simulasi yang mampu menghitung secara optimal tentang konfigurasi barang yang masuk dalam kargo atau kontainer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% comment %} Our Project Mobile{% endcomment %}
+        <div id="carouselExampleCaptions" class="carousel slide relative md:hidden" data-bs-ride="carousel">
+          <h1 class="text-center text-3xl md:text-6xl font-bold">Proyek Kami Yang Menggunakan Python</h1>
+          <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+          </div>
+          <div class="carousel-inner relative w-full overflow-hidden">
+            <div class="carousel-item active relative float-left w-full">
+              <div class="py-10 px-10">
+                <div style="background-image: url('https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg')" class="h-[280px]">
+                  <img src=""/>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="py-10 px-10">
+                <div style="background-image: url('https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg')" class="h-[280px]">
+                  <img src=""/>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="py-10 px-10">
+                <div style="background-image: url('https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg')" class="h-[280px]">
+                  <img src=""/>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="py-10 px-10">
+                <div style="background-image: url('https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg')" class="h-[280px]">
+                  <img src=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        {% comment %} Footer {% endcomment %}
+          <div class="bg-black  ">
+          <div class="px-7 md:px-20 md:pt-12 md:pb-5 py-10">
+            <div class="md:flex md:justify-between">
+              <div class="border-b md:border-none py-4">
+                <div class="flex justify-center md:justify-start">
+                  <img src="{% static "image/public/logo2.svg" %}" alt="logo" class="mb-5"/>
+                </div>
+                <p class="text-white text-center md:text-left md:w-[292px]">Komplek Green Ville, Jalan Ratu<br class="hidden md:block"/> Kemuning Blok BL No. 1,<br class="hidden md:block"/> RT08/RW14, DKI Jakarta <br class="hidden md:block"/>+(62-81) 398-716-212</p>
+              </div>
+              <div class="flex justify-around md:gap-20 pt-5">
+                <div class="">
+                  <h1 class="text-white md:text-2xl font-bold mb-3">Quick Links</h1>
+                  <a href="/">
+                    <p class="text-white mb-3">Home</p>
+                  </a>
+                  <a href="/about-story">
+                    <p class="text-white mb-3">About</p>
+                  </a>
+                  <a href="/solution">
+                    <p class="text-white mb-3">Services</p>
+                  </a>
+                  <a href="/process-overview">
+                    <p class="text-white mb-3">Process</p>
+                  </a>
+                  <a href="/project">
+                    <p class="text-white mb-3">Projects</p>
+                  </a>
+                </div>
+                <div class="">
+                  <h1 class="text-white md:text-2xl font-bold mb-3">Find Us On</h1>
+                  <p class="text-white mb-3">Facebook</p>
+                  <p class="text-white mb-3">Instagram</p>
+                  <p class="text-white mb-3">Facebook</p>
+                  <p class="text-white mb-3">Linkedin</p>
+                </div>
+              </div>
+            </div>
+              <p class="text-white mt-7 flex justify-center">Copyright © <script>document.write(/\d{4}/.exec(Date())[0])</script> KeDA Tech<span class="md:block hidden">. All Rights Reserved.</span></p>
+          </div>
+        </div>
+        {% comment %} after footer {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bgAfterFooterPurple.svg" %}')" class="h-[720px] shadow-black hidden md:flex justify-center items-center bg-no-repeat bg-center bg-cover">
+          <div class="">
+            <h1 class="text-5xl font-bold mb-4 text-[#333333]">Tetap Terhubung Bersama Kami</h1>
+            <p class="text-xl w-[559px] mb-4 text-[#333333]">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
+            <div>
+              <form action="" method="POST">
+                {% csrf_token %}
+                {{form}}
+                <button type="submit" class="px-3 py-1 border bg-[#d20008] text-white text-md ml-3 font-bold rounded hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Berlangganan</button>
+              </form> 
+              {% if message == 'berhasil' %}
+                <p style="color: rgb(16 185 129);" class="text-xs italic">Selamat, Anda telah berlangganan dengan kami!</p>
+              {% elif message == 'error' %}
+                <p style="color: rgb(220 38 38);" class="text-xs italic">Format Email yang Anda masukkan salah!</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+    {% comment %} after footer mobile {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bgAfterFooterPurpleSmall.svg" %}')" class="h-[720px] bg-center bg-cover bg-no-repeat md:hidden">
+          <div class="py-52 px-10">
+            <h1 class="text-4xl font-bold mb-4 text-[#333333]">Tetap Terhubung Bersama Kami</h1>
+            <p class="text-xl text-[#333333] mb-4">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
+            <div>
+              <form action="" method="POST">
+                {% csrf_token %}
+                {{form}}
+                <div class="mt-5">
+                  <button type="submit" class="px-3 py-1 border bg-[#d20008] text-white text-md font-bold rounded hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Berlangganan</button>
+                </div>
+              </form> 
+              {% if message == 'berhasil' %}
+                <p style="color: rgb(16 185 129);" class="text-xs italic">Selamat, Anda telah berlangganan dengan kami!</p>
+              {% elif message == 'error' %}
+                <p style="color: rgb(220 38 38);" class="text-xs italic">Format Email yang Anda masukkan salah!</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+    </div
+{% endblock content %}

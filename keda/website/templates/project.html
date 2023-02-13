@@ -1,0 +1,141 @@
+{% extends 'base.html' %} 
+{% block proyek %}font-bold{% endblock proyek %}
+{% load static %} 
+{% block content %}
+    <div>
+      {% comment %} Banner Project {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bgProject.svg" %}')" class="h-[641px] hidden md:block bg-center bg-cover bg-no-repeat">
+          <div class="px-24 pt-64">
+              <img src="{% static "image/public/projects.svg" %}" alt="logo" class=""/>
+            </div>
+        </div>
+        <img src="{% static "image/public/bgProjectSmall.png" %}" alt="logo" class="md:hidden"/>
+      {% comment %} Quote {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bgProjectWhite.svg" %}')" class="md:h-[720px] hidden md:block bg-center bg-cover bg-no-repeat drop-shadow-lg">
+          <div class="px-10 py-20 md:px-28 md:pt-64">
+            <h1 class="md:text-4xl text-3xl font-bold md:leading-relaxed italic">"Kami akan membawa Anda mengenali KeDA Tech lebih dalam dengan melihat project apa saja yang sudah kami kerjakan, dan memakan waktu berapa lama untuk setiap projectnya. "</h1>
+          </div>
+        </div>
+        <div class="md:h-[720px] shadow shadow-black bg-white md:hidden drop-shadow-lg">
+          <div class="px-10 py-20 md:px-28 md:pt-64">
+            <h2 class="md:text-4xl text-3xl font-bold leading-normal italic">"Kami akan membawa Anda mengenali KeDA Tech lebih dalam dengan melihat project apa saja yang sudah kami kerjakan, dan memakan waktu berapa lama untuk setiap projectnya. "</h2>
+          </div>
+        </div>
+      {% comment %} div Project {% endcomment %}
+        <div class="bg-white py-12 ">
+          <div class=" md:grid md:grid-cols-2 px-8 md:px-28 gap-20">
+            <div class="p-8 block w-full py-5 bg-white shadow-gray-500 shadow-sm hover:shadow-md hover:shadow-black transition duration-300 cursor-pointer mb-8">
+                <!-- <img src="{% static "image/public/divWayFinder.svg" %}" alt="" class="mb-3"/> -->
+                <p class="text-[#555555] text-lg font-semibold mb-4">PT. Citra Kreasi Makmur</p>
+                <h2 class="font-bold text-3xl mb-4">WayFinder</h2>
+                <p>Indoor navigation integrated with custom Warehouse Management System to allow workers to insert and take items with improved efficiency.</p>
+                <button class="mt-5 py-1 w-full border bg-[#d20008] text-white rounded-sm hover:bg-[#b3020f] font-medium transition duration-300">See Project</button>
+            </div>
+            <div class="p-8 block w-full py-5 bg-white shadow-gray-500 shadow-sm hover:shadow-md hover:shadow-black transition duration-300 cursor-pointer mb-8">
+                <!-- <img src="{% static "image/public/divWayFinder.svg" %}" alt="" class="mb-3"/> -->
+                <p class="text-[#555555] text-lg font-semibold mb-4">PT. Citra Kreasi Makmur</p>
+                <h2 class="font-bold text-3xl mb-4">WayFinder</h2>
+                <p>Indoor navigation integrated with custom Warehouse Management System to allow workers to insert and take items with improved efficiency.</p>
+                <button class="mt-5 py-1 w-full border bg-[#d20008] text-white rounded-sm hover:bg-[#b3020f] font-medium transition duration-300">See Project</button>
+            </div>
+          </div>
+          <div class="flex justify-center items-center py-8">
+                <button class="mt-5 rounded py-1 w-[128px] border bg-[#555555] text-white hover:bg-[#444444] font-medium transition duration-300">Load more</button>
+          </div>
+        </div>
+     {% comment %} Digital Transformation {% endcomment %}
+        <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationPink.svg" %}')" class="h-[283px] hidden md:block bg-no-repeat bg-center bg-cover">
+          <div class="container px-20 py-16">
+            <img src="{% static "image/public/YourDigitalTransfoemationPartner.svg" %}" alt="" />
+            <button onclick="window.location.href = '{% url "consultation" %}';"  class="ml-6 mt-6 px-7 py-5 border bg-[#d20008] text-xl text-white rounded-sm hover:bg-[#b3020f] font-medium transition duration-300">Book a chat</button>
+          </div>
+        </div>
+        <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationPinkSmall.svg" %}')" class="h-[656px] bg-no-repeat bg-center bg-cover md:hidden">
+          <div class="container px-10 py-16">
+            <img src="{% static "image/public/YourDigitalTransfoemationPartnerSmall.svg" %}" width={312} alt="" />
+            <button onclick="window.location.href = '{% url "consultation" %}';" class="ml-6 mt-6 px-7 py-3 md:py-5 border bg-[#d20008] text-xl text-white rounded-sm hover:bg-[#b3020f] font-medium transition duration-300">Book a chat</button>
+          </div>
+        </div>
+     {% comment %} Footer {% endcomment %}
+        <div class="bg-black  ">
+          <div class="px-7 md:px-20 md:pt-12 md:pb-5 py-10">
+            <div class="md:flex md:justify-between">
+              <div class="border-b md:border-none py-4">
+                <div class="flex justify-center md:justify-start">
+                  <img src="{% static "image/public/logo2.svg" %}" alt="logo" class="mb-5"/>
+                </div>
+                <p class="text-white text-center md:text-left md:w-[292px]">Komplek Green Ville, Jalan Ratu<br class="hidden md:block"/> Kemuning Blok BL No. 1,<br class="hidden md:block"/> RT08/RW14, DKI Jakarta <br class="hidden md:block"/>+(62-81) 398-716-212</p>
+              </div>
+              <div class="flex justify-around md:gap-20 pt-5">
+                <div class="">
+                  <h1 class="text-white md:text-2xl font-bold mb-3">Quick Links</h1>
+                  <a href="/">
+                    <p class="text-white mb-3">Home</p>
+                  </a>
+                  <a href="/about-story">
+                    <p class="text-white mb-3">About</p>
+                  </a>
+                  <a href="/solution">
+                    <p class="text-white mb-3">Services</p>
+                  </a>
+                  <a href="/process-overview">
+                    <p class="text-white mb-3">Process</p>
+                  </a>
+                  <a href="/project">
+                    <p class="text-white mb-3">Projects</p>
+                  </a>
+                </div>
+                <div class="">
+                  <h1 class="text-white md:text-2xl font-bold mb-3">Find Us On</h1>
+                  <p class="text-white mb-3">Facebook</p>
+                  <p class="text-white mb-3">Instagram</p>
+                  <p class="text-white mb-3">Facebook</p>
+                  <p class="text-white mb-3">Linkedin</p>
+                </div>
+              </div>
+            </div>
+              <p class="text-white mt-7 flex justify-center">Copyright © <script>document.write(/\d{4}/.exec(Date())[0])</script> KeDA Tech<span class="md:block hidden">. All Rights Reserved.</span></p>
+          </div>
+        </div>
+        {% comment %} after footer {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bgAfterFooterPink.svg" %}')" class="h-[720px] shadow-black hidden md:flex justify-center items-center bg-no-repeat bg-center bg-cover">
+          <div class="">
+            <h1 class="text-5xl font-bold mb-4 text-[#333333]">Tetap Terhubung Bersama Kami</h1>
+            <p class="text-xl w-[559px] mb-4 text-[#333333]">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
+            <div>
+              <form action="" method="POST">
+                {% csrf_token %}
+                {{form}}
+                <button type="submit" class="px-3 py-1 border bg-[#d20008] text-white text-md ml-3 font-bold rounded hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Berlangganan</button>
+              </form> 
+              {% if message == 'berhasil' %}
+                <p style="color: rgb(16 185 129);" class="text-xs italic">Selamat, Anda telah berlangganan dengan kami!</p>
+              {% elif message == 'error' %}
+                <p style="color: rgb(220 38 38);" class="text-xs italic">Format Email yang Anda masukkan salah!</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+    {% comment %} after footer mobile {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bgAfterFooterPinkSmall.svg" %}')" class="h-[720px] bg-center bg-cover bg-no-repeat md:hidden">
+          <div class="py-52 px-10">
+            <h1 class="text-4xl font-bold mb-4 text-[#333333]">Tetap Terhubung Bersama Kami</h1>
+            <p class="text-xl text-[#333333] mb-4">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
+            <div>
+              <form action="" method="POST">
+                {% csrf_token %}
+                {{form}}
+                <div class="mt-5">
+                  <button type="submit" class="px-3 py-1 border bg-[#d20008] text-white text-md font-bold rounded hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Berlangganan</button>
+                </div>
+              </form> 
+              {% if message == 'berhasil' %}
+                <p style="color: rgb(16 185 129);" class="text-xs italic">Selamat, Anda telah berlangganan dengan kami!</p>
+              {% elif message == 'error' %}
+                <p style="color: rgb(220 38 38);" class="text-xs italic">Format Email yang Anda masukkan salah!</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock content %}

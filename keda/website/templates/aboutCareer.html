@@ -1,0 +1,330 @@
+{% extends 'base.html' %} 
+{% block tentang %}font-bold{% endblock tentang %}
+{% load static %} 
+{% block content %}
+    <div>
+    {% comment %} Banner Careers  {% endcomment %}
+        <div class="bg-white drop-shadow-lg z-40">
+        <div class="bg-white h-[641px] px-10 py-10 hidden md:block drop-shadow-lg">
+            <div class="grid grid-cols-5 py-28 px-10 place-content-center place-items-center">
+                <img src="{% static "image/public/imgCareer.svg" %}" alt="" class="w-[409px] col-span-2"/>
+                <div class="col-span-3 pl-8">
+                    <h1 class="text-5xl font-bold mb-5">Careers</h1>
+                    <p class="mb-5 w-[539px] text-[#333333] font-light">Kami adalah sekumpulan programmer, designers, dan project manager yang tersebar di seluruh penjuru Indonesia. 
+                    <br/><br/>Karena kami tahu di KeDA Tech, Anda bisa beekerja dari mana saja dan yang dapat kami pastikan adalah kesungguhan hati kami dalam memberikan teknologi yang tepat untuk bisnis para client. </p>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden">
+          <img src="{% static "image/public/imgCareerSmall.svg" %}" alt="" class="w-[409px] col-span-2"/>
+          <div class="col-span-3 px-5 py-5">
+            <h1 class="text-4xl font-bold mb-5">Careers</h1>
+            <p class="mb-5 font-light">Kami adalah sekumpulan programmer, designers, dan project manager yang tersebar di seluruh penjuru Indonesia. 
+            <br/><br/>Karena kami tahu di KeDA Tech, Anda bisa beekerja dari mana saja dan yang dapat kami pastikan adalah kesungguhan hati kami dalam memberikan teknologi yang tepat untuk bisnis para client. </p>
+        </div>
+        </div>
+    {% comment %} ICON ICON {% endcomment %}
+          <div class="md:h-[562px] md:py-28">
+              <div class="grid grid-cols-4 md:px-24 px-5 gap-5 mb-5 md:mb-10 place-content-center place-items-center">
+                  <img src="{% static "image/public/iconCareer1.svg" %}" alt="" class="w-[156px] md:w-[194px]"/>
+                  <img src="{% static "image/public/iconCareer2.svg" %}" alt="" class="w-[104px] md:w-[130px]"/>
+                  <img src="{% static "image/public/iconCareer3.svg" %}" alt="" class="w-[142px] md:w-[178px]"/>
+                  <img src="{% static "image/public/iconCareer4.svg" %}" alt="" class="w-[60px] md:w-[98px]"/>
+              </div>
+              <div class="">
+                  <h1 class="text-center md:text-4xl text-xl px-5 font-bold italic md:px-40 leading-normal md:leading-relaxed text-[#333333]">Dengan tim yang berisi anak muda, KeDA Tech penuh dengan 
+                  kretivitas dan inovasi untuk kemajuan bersama. </h1>
+              </div>
+          </div>
+        </div>
+    {% comment %} Benefit {% endcomment %}
+        <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
+          <div class="carousel-inner relative w-full overflow-hidden">
+            <!-- work from anywhere -->
+            <div class="carousel-item active relative float-left w-full">
+            <div class="bg-white md:flex items-center justify-between pb-8 pt-12 px-10 hidden">
+                <h1 class="font-bold text-5xl">#LifeAtKeDA</h1>
+                <p class="pr-14 pb-2 text-2xl font-bold">1/5</p>
+            </div>
+            <div class="bg-white md:grid md:grid-cols-2 md:py-14 pt-14 place-content-center place-items-center">
+                <div class="md:hidden">
+                  <img src="{% static "image/public/workFromAnyWhere.svg" %}" alt="" class="w-screen rounded-md"/>
+                </div>
+                <div class="md:py-20 md:pl-12 md:px-10 px-5 py-10">
+                    <h1 class="md:text-5xl text-3xl font-bold mb-5">work from anywhere</h1>
+                    <p class="md:pr-10 leading-normal md:text-2xl font-light">Anda bisa bekerja dari mana saja asal tetap terhubung dengan kami.</p>
+                </div>
+                <div class="pl-24 hidden md:block">
+                    <img src="{% static "image/public/workFromAnyWhere.svg" %}" alt="" class="w-[490px]"/>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="bg-white md:flex items-center justify-between pb-8 pt-12 px-10 hidden">
+                <h1 class="font-bold text-5xl">#LifeAtKeDA</h1>
+                <p class="pr-14 pb-2 text-2xl font-bold">2/5</p>
+            </div>
+            <div class="bg-white md:grid md:grid-cols-2 md:py-14 pt-14 place-content-center place-items-center">
+                <div class="md:hidden">
+                  <img src="{% static "image/public/newTechnologies.jpeg" %}" alt="" class="w-screen rounded-md"/>
+                </div>
+                <div class="md:py-20 md:pl-12 md:px-10 px-5 py-10">
+                    <h1 class="md:text-5xl text-3xl font-bold mb-5">Pelajari Teknologi Terbaru Bersama Kami</h1>
+                    <p class="md:pr-10 leading-normal md:text-2xl font-light">Saat bergabung dalam KeDA Tech, Anda bisa bertumbuh dalam mempelajari teknologi terbaru. Selain itu, Anda juga bisa mendapatkan project yang membantu pertumbuhan karir profesional Anda.</p>
+                </div>
+                <div class="pl-24 hidden md:block">
+                    <img src="{% static "image/public/newTechnologies.jpeg" %}" alt="" class="w-[490px]"/>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="bg-white md:flex items-center justify-between pb-8 pt-12 px-10 hidden">
+                <h1 class="font-bold text-5xl">#LifeAtKeDA</h1>
+                <p class="pr-14 pb-2 text-2xl font-bold">3/5</p>
+            </div>
+            <div class="bg-white md:grid md:grid-cols-2 md:py-14 pt-14 place-content-center place-items-center">
+                <div class="md:hidden">
+                  <img src="{% static "image/public/dynamicTeam.jpeg" %}" alt="" class="w-screen rounded-md"/>
+                </div>
+                <div class="md:py-20 md:pl-12 md:px-10 px-5 py-10">
+                    <h1 class="md:text-5xl text-3xl font-bold mb-5">Tim Yang Dinamis</h1>
+                    <p class="md:pr-10 leading-normal md:text-2xl font-light">Dengan tim yang dinamis, Anda tidak akan stuck di satu masa saja. Melainkan Anda bisa mendapatkan ilmu dan pengalaman terbaru dengan cara sharing bersama tim KeDA Tech.</p>
+                  </div>
+                <div class="pl-24 hidden md:block">
+                    <img src="{% static "image/public/dynamicTeam.jpeg" %}" alt="" class="w-[490px]"/>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="bg-white md:flex items-center justify-between pb-8 pt-12 px-10 hidden">
+                <h1 class="font-bold text-5xl">#LifeAtKeDA</h1>
+                <p class="pr-14 pb-2 text-2xl font-bold">4/5</p>
+            </div>
+            <div class="bg-white md:grid md:grid-cols-2 md:py-14 pt-14 place-content-center place-items-center">
+                <div class="md:hidden">
+                  <img src="{% static "image/public/UpdateTechnologies.jpeg" %}" alt="" class="w-screen rounded-md"/>
+                </div>
+                <div class="md:py-20 md:pl-12 md:px-10 px-5 py-10">
+                    <h1 class="md:text-5xl text-3xl font-bold mb-5">Teknologi Terkini</h1>
+                    <p class="md:pr-10 leading-normal md:text-2xl font-light">Selalu siap dengan teknologi terkini, karena bekerja dalam KeDA Tech membutuhkan solusi yang inovatif dan tentunya diimbangi dengan teknologi paling terbaru.</p>
+                </div>
+                <div class="pl-24 hidden md:block">
+                    <img src="{% static "image/public/UpdateTechnologies.jpeg" %}" alt="" class="w-[490px]"/>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="bg-white md:flex items-center justify-between pb-8 pt-12 px-10 hidden">
+                <h1 class="font-bold text-5xl">#LifeAtKeDA</h1>
+                <p class="pr-14 pb-2 text-2xl font-bold">5/5</p>
+            </div>
+            <div class="bg-white md:grid md:grid-cols-2 md:py-14 pt-14 place-content-center place-items-center">
+                <div class="md:hidden">
+                  <img src="{% static "image/public/flexibleTimeWork.jpeg" %}" alt="" class="w-screen rounded-md"/>
+                </div>
+                <div class="md:py-20 md:pl-12 md:px-10 px-5 py-10">
+                    <h1 class="md:text-5xl text-3xl font-bold mb-5">Jam Kerja Fleksibel</h1>
+                    <p class="md:pr-10 leading-normal md:text-2xl font-light">Karena bisa bekerja di mana saja, KeDA Tech menyediakan jam kerja yang fleksibel, yang bisa Anda atur sesuai keinginan. Asalkan tetap terhubung dengan KeDA Tech. Selain itu, #LifeAtKeDA juga memberikan bpjs kesehatan.</p>
+                </div>
+                <div class="pl-24 hidden md:block">
+                    <img src="{% static "image/public/flexibleTimeWork.jpeg" %}" alt="" class="w-[490px]"/>
+                </div>
+            </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-next absolute top-0 bottom-0 flex pt-12 pl-24 justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0 text-black"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <img src="{% static "image/public/iconDetailTechnologies.svg" %}" alt=""/>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    {% comment %} Question Hiring Process {% endcomment %}
+    <div class="bg-white drop-shadow-lg">
+        <div class="bg-[#f8f8f8] py-28 hidden md:block drop-shadow-lg">
+          <div>
+            <h1 class="text-center text-5xl font-bold">So what’s the hir­ing process like?</h1>
+          </div>
+        </div>
+    {% comment %} Process Overview {% endcomment %}
+            <div class="py-10 md:px-24 px-10">
+                <h1 class="md:text-5xl text-3xl font-bold">It could look some­thing like this</h1>
+            </div>
+            <div class="flex justify-center py-14">
+                <img src="{% static "image/public/hiringProcess.svg" %}" alt="" class="w-[904px] hidden md:block"/>
+                <img src="{% static "image/public/hiringProcessSmall.svg" %}" alt="" class="md:hidden"/>
+            </div>
+        </div>
+
+    <div class="bg-[white] md:py-28 md:px-16 px-10 py-10">
+            <div class="mb-14 hidden md:block">
+                <h1 class="text-5xl font-bold">Open Roles</h1>
+            </div>
+            <div class=" md:grid grid-cols-2 place-content-between md:pb-16 pb-10">
+                
+                <Input type="text" id='searchCareer' name="searchCareer" placeholder="⌕ Search by position or tag" class="md:w-full w-[306px] py-2 rounded-sm border-gray-300 shadow-sm focus:ring-[#d20008] focus:border-gray-200 transition duration-300 mb-5 md:mb-0"/>
+               
+            </div>
+            <div class="md:grid grid-cols-2 gap-10 ">
+
+              {% for career in careers %}
+              
+              <div class="outers" >
+
+              <div {% if forloop.counter > 4  %} class='career hidden'{% endif %}>
+                <Card class="p-8 block w-full py-5 rounded-xl bg-white shadow-md mb-9 md:mb-0">
+                 
+                    <div class="flex justify-between mb-3 ">
+                      <h1 class="text-2xl font-bold card-title">{{ career.career_name }}</h1>
+                      <div class="flex">
+                    <button id="dropdownDefaultButton-{{ forloop.counter }}" data-dropdown-toggle="dropdownCareer-{{ forloop.counter }}" class="text-white font-medium rounded-lg text-sm py-2.5 text-center flex items-center cursor-pointer" type="button">
+                      <img src="{% static "image/public/3dot.svg" %}" alt="" /></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownCareer-{{ forloop.counter }}" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-30">
+                        <ul class="py-2 text-sm text-center text-black" aria-labelledby="dropdownDefaultButton-{{ forloop.counter }}">
+                          <li>
+                            <button value="{% url "detail-career" career.slug_career %}" id="job{{ forloop.counter }}" onclick="copyClipboard(this.value)" class="block px-4 py-2 hover:bg-gray-100 cursor-pointer">Share</button>
+                          </li>
+                    </div>
+                  </div>
+                    </div>
+                    <p style="background-color: {{ career.career_tag_id.color_id.hex_code }};" class="career-tag w-fit px-5 py-1 text-center rounded-full text-white mb-3">{{ career.career_tag_id.career_tag_name }}</p>
+                    <p class="text-lg">{{ career.description|safe|truncatechars:140 }}</p>
+                    <p class="text-lg font-semibold">Apply before: {{career.deadline}}</p>
+                    <Button onclick="window.location.href = '{% url "detail-career" career.slug_career %}';" href="" class="mt-5 py-2 w-full border bg-[#d20008] text-white rounded-md hover:bg-[#b3020f] font-medium transition duration-300">Apply Now </Button>
+               
+                </Card>
+              </div>
+
+            </div>
+
+              {% endfor %}
+
+            </div>
+
+            {% if careers|length != 0 %}
+
+            <div class="flex justify-center items-center md:py-8">
+                <button value="{{careers|length}}" id="loadMoreCareer" name="loadMoreCareer" class="mt-5 rounded py-1 w-[128px] border bg-[#555555] text-white hover:bg-[#444444] font-medium transition duration-300">Load more</button>
+            </div>
+
+            {% else %}
+            
+            <div class="flex justify-center items-center md:py-8">
+                <p>Sorry, There's no data available...</p>   
+            </div>
+
+            {% endif %}
+        </div>    
+
+    {% comment %} Digital Transformation {% endcomment %}
+        <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationTosca.svg" %}')" class="h-[283px] hidden md:block bg-no-repeat bg-center bg-cover">
+          <div class="container px-20 py-16">
+            <img src="{% static 'image/public/YourDigitalTransfoemationPartner.svg' %}" alt="" />
+            <Button onclick="window.location.href = '{% url "consultation" %}';" class="ml-6 mt-6 px-7 py-5 border bg-[#d20008] text-xl text-white rounded-sm hover:bg-[#b3020f] font-medium transition duration-300">Book a chat</Button>
+          </div>
+        </div>
+        <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationToscaSmall.svg" %}')" class="h-[656px] bg-no-repeat bg-center bg-cover md:hidden">
+          <div class="container px-10 py-16">
+            <img src="{% static "image/public/YourDigitalTransfoemationPartnerSmall.svg" %}" width={312} alt="" />
+            <button onclick="window.location.href = '{% url "consultation" %}';" class="ml-6 mt-6 px-7 py-3 md:py-5 border bg-[#d20008] text-xl text-white rounded-sm hover:bg-[#b3020f] font-medium transition duration-300">Book a chat</button>
+          </div>
+        </div>
+    {% comment %} Footer {% endcomment %}
+    <div class="bg-black  ">
+      <div class="px-7 md:px-20 md:pt-12 md:pb-5 py-10">
+        <div class="md:flex md:justify-between">
+          <div class="border-b md:border-none py-4">
+            <div class="flex justify-center md:justify-start">
+              <img src="{% static "image/public/logo2.svg" %}" alt="logo" class="mb-5"/>
+            </div>
+            <p class="text-white text-center md:text-left md:w-[292px]">Komplek Green Ville, Jalan Ratu<br class="hidden md:block"/> Kemuning Blok BL No. 1,<br class="hidden md:block"/> RT08/RW14, DKI Jakarta <br class="hidden md:block"/>+(62-81) 398-716-212</p>
+          </div>
+          <div class="flex justify-around md:gap-20 pt-5">
+            <div class="">
+              <h1 class="text-white md:text-2xl font-bold mb-3">Quick Links</h1>
+              <a href="/">
+                    <p class="text-white mb-3">Home</p>
+                  </a>
+                  <a href="/about-story">
+                    <p class="text-white mb-3">About</p>
+                  </a>
+                  <a href="/solution">
+                    <p class="text-white mb-3">Services</p>
+                  </a>
+                  <a href="/process-overview">
+                    <p class="text-white mb-3">Process</p>
+                  </a>
+                  <a href="/project">
+                    <p class="text-white mb-3">Projects</p>
+                  </a>
+            </div>
+            <div class="">
+              <h1 class="text-white md:text-2xl font-bold mb-3">Find Us On</h1>
+              <p class="text-white mb-3">Facebook</p>
+              <p class="text-white mb-3">Instagram</p>
+              <p class="text-white mb-3">Facebook</p>
+              <p class="text-white mb-3">Linkedin</p>
+            </div>
+          </div>
+        </div>
+          <p class="text-white mt-7 flex justify-center">Copyright © <script>document.write(/\d{4}/.exec(Date())[0])</script> KeDA Tech<span class="md:block hidden">. All Rights Reserved.</span></p>
+      </div>
+    </div>
+    {% comment %} after footer {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bgAfterFooterTosca.svg" %}')" class="h-[720px] shadow-black hidden md:flex justify-center items-center bg-no-repeat bg-center bg-cover">
+          <div class="">
+            <h1 class="text-5xl font-bold mb-4 text-[#333333]">Tetap Terhubung Bersama Kami</h1>
+            <p class="text-xl w-[559px] mb-4 text-[#333333]">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
+            <div>
+              <form action="" method="POST">
+                {% csrf_token %}
+                {{form}}
+                <button type="submit" class="px-3 py-1 border bg-[#d20008] text-white text-md ml-3 font-bold rounded hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Berlangganan</button>
+              </form> 
+              {% if message == 'berhasil' %}
+                <p style="color: rgb(16 185 129);" class="text-xs italic">Selamat, Anda telah berlangganan dengan kami!</p>
+              {% elif message == 'error' %}
+                <p style="color: rgb(220 38 38);" class="text-xs italic">Format Email yang Anda masukkan salah!</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+    {% comment %} after footer mobile {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bgAfterFooterToscaSmall.svg" %}')" class="h-[720px] bg-center bg-cover bg-no-repeat md:hidden">
+          <div class="py-52 px-10">
+            <h1 class="text-4xl font-bold mb-4 text-[#333333]">Tetap Terhubung Bersama Kami</h1>
+            <p class="text-xl text-[#333333] mb-4">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
+            <div>
+              <form action="" method="POST">
+                {% csrf_token %}
+                {{form}}
+                <div class="mt-5">
+                  <button type="submit" class="px-3 py-1 border bg-[#d20008] text-white text-md font-bold rounded hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Berlangganan</button>
+                </div>
+              </form> 
+              {% if message == 'berhasil' %}
+                <p style="color: rgb(16 185 129);" class="text-xs italic">Selamat, Anda telah berlangganan dengan kami!</p>
+              {% elif message == 'error' %}
+                <p style="color: rgb(220 38 38);" class="text-xs italic">Format Email yang Anda masukkan salah!</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+       
+      function copyClipboard(linkShare){
+
+          navigator.clipboard.writeText(linkShare)
+          
+      }
+    </script>
+
+    <script src ="{% static 'js/career.js' %}"></script>
+    
+{% endblock content %}

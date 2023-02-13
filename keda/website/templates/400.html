@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div>
+  <div style="background-image: url('{% static "image/public/bg404.svg" %}')" class="h-screen bg-no-repeat bg-center bg-cover md:flex flex-col justify-center items-center hidden">
+      <p class="text-5xl mb-7"><span class="text-[#d20008] font-bold">ERROR 400</span> - Bad Request Error</p>
+      <button onclick="window.location.href = '{% url "index" %}';" class="md:px-4 md:py-1 py-2 px-5 border text-lg font-bold bg-[#d20008] border-[#d20008] text-white rounded  hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Return Home</button>
+  </div>
+  <div style="background-image: url('{% static "image/public/bg404Small.svg" %}')" class="h-screen bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center md:hidden">
+      <p class="text-2xl mb-7"><span class="text-[#d20008] font-bold">ERROR 400</span> - Bad Request Error</p>
+      <button onclick="window.location.href = '{% url "index" %}';" class="py-2 px-5 border text-sm font-bold bg-[#d20008] border-[#d20008] text-white rounded  hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Return Home</button>
+  </div>
+</div>
+{% endblock content %}

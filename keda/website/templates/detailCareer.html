@@ -1,0 +1,182 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+    <div>
+      {% comment %} Banner Careers  {% endcomment %}
+        <div class="bg-white md:px-14 py-10 px-2">
+           <div>
+              <div class="mb-10 px-5">
+                <h1 class="text-4xl font-bold mb-4">{{ career.career_name }}</h1>
+                <p style="background-color: {{ career.career_tag_id.color_id.hex_code }};" class="text-lg w-fit px-4 py-1 text-center rounded-full text-white mb-5">{{career.career_tag_id}}</p>
+                <p class="leading-relaxed mb-2">{{career.description |safe}}</p>
+                <p class="text-sm font-semibold">Apply Before: {{ career.deadline|date:"j F Y" }}</p>
+              </div>
+              <div class="mb-10">
+                <h1 class="text-2xl font-semibold mb-4 pl-5">Role & Responsibility</h1>
+                <div class="bullet pr-5">
+                  {{career.role_responsibility|safe}}
+                </div>
+              </div>
+              <div class="mb-10">
+                <h1 class="text-2xl font-semibold mb-4 pl-5">Requirement Employee</h1>
+                <div class="bullet pr-5">
+                  {{career.requirement|safe}}
+                </div>
+              </div>
+              <div class="mb-10">
+                <h1 class="text-2xl font-semibold mb-4 pl-5">Plus</h1>
+                <div class="bullet pr-5">
+                  {{career.plus|safe}}
+                </div>
+              </div>
+              <div class="pb-10 md:border-b-2 border-[#696969]">
+                <h1 class="text-2xl font-semibold mb-4 p-5">Benefits</h1>
+                <div class="bullet pr-5">
+                  {{career.benefits|safe}}
+                </div>
+              </div>
+           </div>
+        </div>
+      {% comment %} Form Registration {% endcomment %}
+        <div class="bg-white md:py-16 md:px-14 pb-10 px-8">
+            <div>
+              <p style="color: rgb(16 185 129);" class="text-xs italic">
+                {{ success }}
+              </p>
+              
+              <form action=""  method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="hidden" name="form_type" value="form_candidate">
+                <div class="grid grid-rows-2 mb-10">
+                  <label for="name" class="font-semibold">Nama</label>
+                  {{form_candidate.candidate_name}} 
+                  
+                  <p style="color: rgb(220 38 38);" class="text-xs italic"> 
+                    {{ form_candidate.candidate_name.errors }}
+                  </p>
+
+                </div>
+                <div class="grid grid-rows-2 mb-10">
+                  <label for="career_tag_id" class="font-semibold">Posisi yang dilamar</label>
+
+                  {{form_candidate.career_tag_id}} 
+                  
+                  <p style="color: rgb(220 38 38);" class="text-xs italic">
+                    {{ form_candidate.candidate_career_tag_id.errors }}
+                  </p>
+                 
+                 </div>
+                <div class="grid grid-rows-2 mb-10">
+                  
+                  <label for="phone" class="font-semibold">No Whatsapp</label>
+                  <div class="flex md:w-[557px]">
+                  {{form_candidate.whatsapp_number}} 
+                  </div>
+                  <p style="color: rgb(220 38 38);" class="text-xs italic">
+                    {{ form_candidate.whatsapp_number.errors }}
+                    <p style="color: rgb(220 38 38);" class="text-xs italic">
+                 </div>
+                <div class="grid grid-rows-2 mb-10">
+                  <label for="email" class="font-semibold">Email</label>
+                  {{form_candidate.email}} 
+                  <p style="color: rgb(220 38 38);" class="text-xs italic">
+                  {{ form_candidate.email.errors }}
+                  </p>
+                </div>
+                <div class="grid gap-2 mb-10">
+                  
+                  <label for="cv" class="font-semibold">Upload your CV here</label>
+                    <div class="flex justify-between md:w-[557px] border rounded-lg border-gray-300 shadow-sm cursor-pointer">
+                      <label for="cv">
+                        <div class="py-2 px-3 cursor-pointer">
+                          <p class="text-gray-400 text-sm" id="wpName">
+                            Select your file
+                          </p>
+                        </div>
+                      </label>
+                      <label for="cv">
+                      <div class="py-2 px-3 border-l rounded-lg border-gray-300 shadow-sm cursor-pointer">
+                        <p class="text-gray-400 text-sm cursor-pointer">
+                          Select file
+                        </p>
+                      </div>
+                    </label>
+                    </div>
+                  </label>
+                  
+                  {{form_candidate.cv}}
+                  <p class="text-sm text-gray-600 dark:text-gray-600 italic" id="file_input_help">File type: PDF</p>
+                 
+                  <p style="color: rgb(220 38 38);" class="text-xs italic">
+                  {{ form_candidate.cv.errors }}
+                  </p>
+                  <p class="font-semibold italic">Apply Before: {{ career.deadline|date:"j F Y" }}</p>
+                </div>
+
+                <div>
+                  <Button class="md:w-[557px] w-full px-4 py-2 border bg-[#d20008] border-white text-white rounded hover:bg-[#b3020f] hover:border-[#d20008] text-sm font-medium transition duration-300"><span class="flex justify-center items-center"><p class="mr-3">Join Now</p> <img src="{% static "image/public/lebihDari.svg" %}" alt="" class="mt-1"/></span></Button>
+                </div>
+              </form>
+            </div>
+        </div>
+      {% comment %} Footer {% endcomment %}
+      <div class="bg-black  ">
+        <div class="px-7 md:px-20 md:pt-12 md:pb-5 py-10">
+          <div class="md:flex md:justify-between">
+            <div class="border-b md:border-none py-4">
+              <div class="flex justify-center md:justify-start">
+                <img src="{% static "image/public/logo2.svg" %}" alt="logo" class="mb-5"/>
+              </div>
+              <p class="text-white text-center md:text-left md:w-[292px]">Komplek Green Ville, Jalan Ratu<br class="hidden md:block"/> Kemuning Blok BL No. 1,<br class="hidden md:block"/> RT08/RW14, DKI Jakarta <br class="hidden md:block"/>+(62-81) 398-716-212</p>
+            </div>
+            <div class="flex justify-around md:gap-20 pt-5">
+              <div class="">
+                <h1 class="text-white md:text-2xl font-bold mb-3">Quick Links</h1>
+                <a href="/">
+                    <p class="text-white mb-3">Home</p>
+                  </a>
+                  <a href="/about-story">
+                    <p class="text-white mb-3">About</p>
+                  </a>
+                  <a href="/solution">
+                    <p class="text-white mb-3">Services</p>
+                  </a>
+                  <a href="/process-overview">
+                    <p class="text-white mb-3">Process</p>
+                  </a>
+                  <a href="/project">
+                    <p class="text-white mb-3">Projects</p>
+                  </a>
+              </div>
+              <div class="">
+                <h1 class="text-white md:text-2xl font-bold mb-3">Find Us On</h1>
+                <p class="text-white mb-3">Facebook</p>
+                <p class="text-white mb-3">Instagram</p>
+                <p class="text-white mb-3">Facebook</p>
+                <p class="text-white mb-3">Linkedin</p>
+              </div>
+            </div>
+          </div>
+            <p class="text-white mt-7 flex justify-center">Copyright © <script>document.write(/\d{4}/.exec(Date())[0])</script> KeDA Tech<span class="md:block hidden">. All Rights Reserved.</span></p>
+        </div>
+      </div>
+      {% comment %} After Footer {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bgAfterFooterGreens.svg" %}')" class="h-[720px] shadow-black">
+          <div class="container px-64 pt-72">
+            <h1 class="text-5xl font-bold mb-4">Tetap Terhubung Bersama Kami</h1>
+            <p class="text-2xl pr-20 mb-4">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
+            <div>
+              <form action="" method="POST" id="subs">
+                {% csrf_token %}
+                <input type="hidden" name="form_type" value="form_subs">
+                {{form_subs}}
+                <button type="submit" class="px-3 py-1 border bg-[#d20008] text-white text-md ml-3 font-bold rounded hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Berlangganan</button>
+              </form> 
+
+              {% if message == 'berhasil' %}
+                <p style="color: rgb(16 185 129);" class="text-xs italic">Selamat, Anda telah berlangganan dengan kami!</p>
+              {% elif message == 'error' %}
+                <p style="color: rgb(220 38 38);" class="text-xs italic">Format Email yang Anda masukkan salah!</p>
+              {% endif %}</div>
+          </div>
+        </div>
+    </div>
+{% endblock content %}

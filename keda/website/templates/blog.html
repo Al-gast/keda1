@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% block blog %}font-bold{% endblock blog %} 
+{% load static %} 
+{% block content %}
+    <div>
+     {% comment %} Banner Blog  {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bgKeDABlog.svg" %}')" class="h-[641px] hidden md:block bg-center bg-cover bg-no-repeat">
+        <div class="px-24 pt-64">
+            <img src="{% static "image/public/KeDABlog.svg" %}" alt="logo" class=""/>
+          </div>
+        </div>
+        <img src="{% static "image/public/bgKeDABlogSmall.png" %}" alt="logo" class=" md:hidden"/>
+    {% comment %} Main Blog {% endcomment %}
+        <div class="bg-[white]">
+            <div class=" md:grid md:grid-cols-2 md:place-content-between md:py-10 pt-10 px-10">
+                <input type="text"  id='searchBlog' name="searchBlog"  placeholder="⌕ Search by title or tag blog" class="md:w-[559px] w-[306px] py-2 rounded-sm border-gray-300 shadow-sm focus:ring-[#d20008] focus:border-gray-200 transition duration-300 mb-5"/>
+                {% comment %} <Input type="text" id='searchBlogPage' name="searchBlogPage" placeholder="⌕ Search" class="md:w-[559px] w-[306px] py-2 rounded-sm border-gray-300 shadow-sm focus:ring-[#d20008] focus:border-gray-200 transition duration-300 mb-5 md:mb-0"/> {% endcomment %}
+                
+            </div>
+            {% comment %} looping blog {% endcomment %}
+            <div class="md:grid md:grid-cols-12 gap-10 md:px-12 px-7 py-6">
+                <div class="col-span-9">
+                    <div class=" md:grid md:grid-cols-2 place-content-center place-items-center gap-10 py-5">
+                      {% for blog in blogs %}
+                        <div class="outersBlog">
+                        <div {% if forloop.counter > 3 %} class='blog hidden' {% endif %}>
+                          <div class="grid gap-5 py-5 w-[420pxpx] h-[670px]">
+                              <img src="{{ blog.image_blog.url }}" alt="" class="object-center object-cover w-full h-[308px]"/>
+                              <p style="background-color : {{ blog.blog_tag.color_id.hex_code }}" class="text-white rounded-full py-1 px-4 w-fit blogTag">{{ blog.blog_tag}}</p>
+                              <h3 class="text-xl font-bold blogTitle">{{ blog.blog_header|safe|truncatechars:40 }}</h3>
+                              <p>{{ blog.description|safe|truncatechars:200 }}</p>
+                              <Button onclick="window.location.href = '{% url "detail-blog" blog.slug_blog %}';" class="w-full px-4 h-[44px] border bg-[#d20008] border-white text-white rounded hover:bg-[#b3020f] hover:border-[#d20008] text-sm font-medium transition duration-300"><span class="flex justify-center items-center"><p class="mr-3">Baca Selengkapnya</p> <img src="{% static "image/public/lebihDari.svg" %}" alt="" class="mt-1"/></span></Button>
+                          </div>
+                        </div>
+                      </div>
+                      {% endfor %}
+                    </div>
+                    {% if blogs|length != 0 %}
+                    <div class="flex justify-center items-center md:py-8">
+                        <button value="{{blogs|length}}" id="loadMore" name="loadMore" class="mt-5 rounded py-1 w-[128px] border bg-[#555555] text-white hover:bg-[#444444] font-medium transition duration-300">Load more</button>
+                    </div>
+                    {% else %}
+                    <div class="flex justify-center items-center md:py-8">
+                        <p>Sorry, There's no data available...</p>   
+                    </div>
+                    {% endif %}
+
+
+
+
+                </div>
+
+
+
+                <div class="col-span-3 bg-[#f8f8f8] p-5 hidden md:block rounded-sm">
+                    <h1 class="text-2xl text-center font-semibold mb-4">Trending Article</h1>
+                    {% for trending in trendings %}
+                      <a href="{% url "detail-blog" trending.slug_blog %}">
+                        <div class="grid gap-2 mb-4 cursor-pointer">
+                            <img src="{{ trending.image_blog.url }}" alt="" class="w-[246px] h[177px] object-center object-cover"/>
+                            <p style="background-color : {{ trending.blog_tag.color_id.hex_code }}" class="text-white rounded-full py-1 px-4 w-fit ">{{ trending.blog_tag}}</p>
+                            <p class="text-xl font-bold">{{ trending.blog_header}}</p>
+                            <p>{{ trending.description|safe|truncatechars:110 }}</p>
+                        </div>
+                      </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% comment %} Digital Transformation {% endcomment %}
+        <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationGreen.svg" %}')" class="h-[283px] hidden md:block bg-no-repeat bg-center bg-cover">
+          <div class="container px-20 py-16">
+            <img src="{% static "image/public/YourDigitalTransfoemationPartner.svg" %}" alt="" />
+            <Button onclick="window.location.href = '{% url "consultation" %}';" class="ml-6 mt-6 px-7 py-5 border bg-[#d20008] text-xl text-white rounded-sm hover:bg-[#b3020f] font-medium transition duration-300">Book a chat</Button>
+          </div>
+        </div>
+        <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationGreenSmall.svg" %}')" class="h-[656px] bg-no-repeat bg-center bg-cover md:hidden">
+          <div class="container px-10 py-16">
+            <img src="{% static "image/public/YourDigitalTransfoemationPartnerSmall.svg" %}" width={312} alt="" />
+            <button onclick="window.location.href = '{% url "consultation" %}';" class="ml-6 mt-6 px-7 py-3 md:py-5 border bg-[#d20008] text-xl text-white rounded-sm hover:bg-[#b3020f] font-medium transition duration-300">Book a chat</button>
+          </div>
+        </div>
+    {% comment %} Footer {% endcomment %}
+    <div class="bg-black  ">
+      <div class="px-7 md:px-20 md:pt-12 md:pb-5 py-10">
+        <div class="md:flex md:justify-between">
+          <div class="border-b md:border-none py-4">
+            <div class="flex justify-center md:justify-start">
+              <img src="{% static "image/public/logo2.svg" %}" alt="logo" class="mb-5"/>
+            </div>
+            <p class="text-white text-center md:text-left md:w-[292px]">Komplek Green Ville, Jalan Ratu<br class="hidden md:block"/> Kemuning Blok BL No. 1,<br class="hidden md:block"/> RT08/RW14, DKI Jakarta <br class="hidden md:block"/>+(62-81) 398-716-212</p>
+          </div>
+          <div class="flex justify-around md:gap-20 pt-5">
+            <div class="">
+              <h1 class="text-white md:text-2xl font-bold mb-3">Quick Links</h1>
+              <a href="/">
+                    <p class="text-white mb-3">Home</p>
+                  </a>
+                  <a href="/about-story">
+                    <p class="text-white mb-3">About</p>
+                  </a>
+                  <a href="/solution">
+                    <p class="text-white mb-3">Services</p>
+                  </a>
+                  <a href="/process-overview">
+                    <p class="text-white mb-3">Process</p>
+                  </a>
+                  <a href="/project">
+                    <p class="text-white mb-3">Projects</p>
+                  </a>
+            </div>
+            <div class="">
+              <h1 class="text-white md:text-2xl font-bold mb-3">Find Us On</h1>
+              <p class="text-white mb-3">Facebook</p>
+              <p class="text-white mb-3">Instagram</p>
+              <p class="text-white mb-3">Facebook</p>
+              <p class="text-white mb-3">Linkedin</p>
+            </div>
+          </div>
+        </div>
+          <p class="text-white mt-7 flex justify-center">Copyright © <script>document.write(/\d{4}/.exec(Date())[0])</script> KeDA Tech<span class="md:block hidden">. All Rights Reserved.</span></p>
+      </div>
+    </div>
+    {% comment %} after footer {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bgAfterFooterGreen.svg" %}')" class="h-[720px] shadow-black hidden md:flex justify-center items-center bg-no-repeat bg-center bg-cover">
+          <div class="">
+            <h1 class="text-5xl font-bold mb-4 text-[#333333]">Tetap Terhubung Bersama Kami</h1>
+            <p class="text-xl w-[559px] mb-4 text-[#333333]">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
+            <div>
+              <form action="" method="POST">
+                {% csrf_token %}
+                {{form}}
+                <button type="submit" class="px-3 py-1 border bg-[#d20008] text-white text-md ml-3 font-bold rounded hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Berlangganan</button>
+              </form> 
+              {% if message == 'berhasil' %}
+                <p style="color: rgb(16 185 129);" class="text-xs italic">Selamat, Anda telah berlangganan dengan kami!</p>
+              {% elif message == 'error' %}
+                <p style="color: rgb(220 38 38);" class="text-xs italic">Format Email yang Anda masukkan salah!</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+    {% comment %} after footer mobile {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bgAfterFooterGreenSmall.svg" %}')" class="h-[720px] bg-center bg-cover bg-no-repeat md:hidden">
+          <div class="py-52 px-10">
+            <h1 class="text-4xl font-bold mb-4 text-[#333333]">Tetap Terhubung Bersama Kami</h1>
+            <p class="text-xl text-[#333333] mb-4">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
+            <div>
+              <form action="" method="POST">
+                {% csrf_token %}
+                {{form}}
+                <div class="mt-5">
+                  <button type="submit" class="px-3 py-1 border bg-[#d20008] text-white text-md font-bold rounded hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Berlangganan</button>
+                </div>
+              </form> 
+              {% if message == 'berhasil' %}
+                <p style="color: rgb(16 185 129);" class="text-xs italic">Selamat, Anda telah berlangganan dengan kami!</p>
+              {% elif message == 'error' %}
+                <p style="color: rgb(220 38 38);" class="text-xs italic">Format Email yang Anda masukkan salah!</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src ="{% static 'js/blog.js' %}"></script>
+{% endblock content %}

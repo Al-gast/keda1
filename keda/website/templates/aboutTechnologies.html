@@ -1,0 +1,168 @@
+{% extends 'base.html' %} 
+{% block tentang %}font-bold{% endblock tentang %}
+{% load static %} 
+{% block content %}
+    <div>
+    {% comment %} Image Technologies {% endcomment %}
+        <div style="background-image: url('{% static "image/public/bannerTechnologies.svg" %}')" class="h-[329px] hidden md:block">
+        </div>
+        <div style="background-image: url('{% static "image/public/imgTeknologiSmall.svg" %}')" class="h-[329px] md:hidden">
+        </div>
+    {% comment %} Technologi {% endcomment %}
+    <div class="bg-white drop-shadow-lg">
+    <div class="bg-white drop-shadow-lg">
+    <div class=" bg-[#fbfbfb] drop-shadow-lg">
+        <div class="bg-white md:h-[312px] md:drop-shadow-lg">
+            <div class="md:px-20 md:py-16 px-8 py-10">
+                <h1 class="md:text-8xl text-[#333333] text-4xl font-bold md:mb-7 mb-5">Teknologi</h1>
+                <p class="md:text-2xl md:pl-12 text-[#333333] font-light">Untuk kemajuan teknologi Anda, kami menggunakan semua fitur di bawah ini</p>
+            </div>
+        </div>
+    {% comment %} Programming Languege {% endcomment %}
+          <div class="md:grid md:grid-cols-5 grid grid-cols-3 py-5 md:pr-2 place-content-center place-items-center gap-5 px-8">
+              <img src="{% static "image/public/unreal.svg" %}" alt="" class=""/>
+              <img src="{% static "image/public/mysql.svg" %}" alt="" class=""/>
+              <img src="{% static "image/public/python.svg" %}" alt="" class=""/>
+              <img src="{% static "image/public/unity.svg" %}" alt="" class=""/>
+              <img src="{% static "image/public/mongoDB.svg" %}" alt="" class=""/>
+          </div>
+        </div>
+    {% comment %} Unreal Engine {% endcomment %}
+        <div class="bg-white md:h-[720px] md:flex justify-around items-center md:px-10 px-6 py-16 md:py-0">
+            <div class="mb-8 md:mb-0">
+                <h1 class="md:text-5xl text-3xl text-[#333333] font-bold mb-5">UNREAL ENGINE</h1>
+                <p class="mb-5 text-[#333333] font-light">Game Engine dari Epic ini mampu menghasilkan framerate yang stabil,<br class="hidden md:block"/> grafik yang bagus, shadow, depth of field, dan mendukung DX 11.</p>
+                <a href="/detail-technologies">
+                    <div class="flex items-center cursor-pointer">
+                        <img src="{% static "image/public/iconDetailTechnologies.svg" %}" alt="" />
+                        <p class="ml-2 font-semibold">Selengkapnya tentang UNREAL ENGINE</p>
+                    </div>
+                </a>
+            </div>
+            <img src="{% static "image/public/unreal.svg" %}" alt="" class="md:w-[281px] w-[222px] hidden md:block"/>
+            <div class="flex justify-center md:hidden">
+                <img src="{% static "image/public/unreal.svg" %}" alt="" class="w-[222px]"/>
+            </div>
+        </div>
+      </div>
+    {% comment %} Mysql {% endcomment %}
+        <div class="bg-[#fbfbfb] md:h-[720px] md:flex justify-around items-center md:px-10 px-6 py-16 md:py-0">
+            <div class="hidden md:block">
+                <img src="{% static "image/public/mysql.svg" %}" alt="" class="w-[409px]"/>
+            </div>
+            <div class="mb-8 md:mb-0">
+                <h1 class="md:text-5xl text-3xl font-bold mb-5 text-[#333333]">My SQL</h1>
+                <p class="mb-5 text-[#333333] font-light">Memiliki tingkat fleksibilitas tinggi terhadap teknologi dan bersifat cross<br class="hidden md:block"/> platform. Struktur tabelnya yang cenderung mudah digunakan,<br class="hidden md:block"/> menjadikan MySQL memiliki performa yang baik saat diterapkan.</p>
+                <a href="/detail-mysql">
+                    <div class="flex items-center cursor-pointer">
+                        <img src="{% static "image/public/iconDetailTechnologies.svg" %}" alt="" />
+                        <p class="ml-2 font-semibold text-[#333333]">Selengkapnya tentang My SQL</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex justify-center md:hidden px-10">
+                <img src="{% static "image/public/mysql.svg" %}" alt="" class="w-[409px]"/>
+            </div>
+        </div>
+        </div>
+    {% comment %} Django {% endcomment %}
+        <div class="bg-white md:h-[720px] md:flex justify-around items-center md:px-10 px-5 py-16 md:py-0">
+            <div class="md:hidden px-10">
+            </div>
+            <div class="mb-10 md:mb-0">
+                <h1 class="md:text-5xl text-3xl font-bold mb-5 text-[#333333]">Django Python</h1>
+                <p class="mb-5 text-[#333333] font-light">simply dummy text of the printing and typesetting industry. Lorem Ipsum <br class="hidden md:block"/>has been the industry's standard dummy text ever since the 1500s,</p>
+                <a href="/detail-python">
+                    <div class="flex items-center cursor-pointer">
+                        <img src="{% static "image/public/iconDetailTechnologies.svg" %}" alt="" />
+                        <p class="ml-2 font-semibold text-[#333333]">Selengkapnya tentang Python</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex justify-center px-10">
+                <img src="{% static "image/public/python.svg" %}" alt="" class="w-[369px]"/>
+            </div>
+        </div>
+    {% comment %} Footer {% endcomment %}
+      <div class="bg-black  ">
+        <div class="px-7 md:px-20 md:pt-12 md:pb-5 py-10">
+          <div class="md:flex md:justify-between">
+            <div class="border-b md:border-none py-4">
+              <div class="flex justify-center md:justify-start">
+                <img src="{% static "image/public/logo2.svg" %}" alt="logo" class="mb-5"/>
+              </div>
+              <p class="text-white text-center md:text-left md:w-[292px]">Komplek Green Ville, Jalan Ratu<br class="hidden md:block"/> Kemuning Blok BL No. 1,<br class="hidden md:block"/> RT08/RW14, DKI Jakarta <br class="hidden md:block"/>+(62-81) 398-716-212</p>
+            </div>
+            <div class="flex justify-around md:gap-20 pt-5">
+              <div class="">
+                <h1 class="text-white md:text-2xl font-bold mb-3">Quick Links</h1>
+                <a href="/">
+                    <p class="text-white mb-3">Home</p>
+                  </a>
+                  <a href="/about-story">
+                    <p class="text-white mb-3">About</p>
+                  </a>
+                  <a href="/solution">
+                    <p class="text-white mb-3">Services</p>
+                  </a>
+                  <a href="/process-overview">
+                    <p class="text-white mb-3">Process</p>
+                  </a>
+                  <a href="/project">
+                    <p class="text-white mb-3">Projects</p>
+                  </a>
+              </div>
+              <div class="">
+                <h1 class="text-white md:text-2xl font-bold mb-3">Find Us On</h1>
+                <p class="text-white mb-3">Facebook</p>
+                <p class="text-white mb-3">Instagram</p>
+                <p class="text-white mb-3">Facebook</p>
+                <p class="text-white mb-3">Linkedin</p>
+              </div>
+            </div>
+          </div>
+            <p class="text-white mt-7 flex justify-center">Copyright © <script>document.write(/\d{4}/.exec(Date())[0])</script> KeDA Tech<span class="md:block hidden">. All Rights Reserved.</span></p>
+        </div>
+      </div>
+      {% comment %} after footer {% endcomment %}
+      <div style="background-image: url('{% static "image/public/bgAfterFooterPurple.svg" %}')" class="h-[720px] shadow-black hidden md:flex justify-center items-center bg-no-repeat bg-center bg-cover">
+        <div class="">
+          <h1 class="text-5xl font-bold mb-4 text-[#333333]">Tetap Terhubung Bersama Kami</h1>
+          <p class="text-xl w-[559px] mb-4 text-[#333333]">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
+          <div>
+            <form action="" method="POST">
+              {% csrf_token %}
+              {{form}}
+              <button type="submit" class="px-3 py-1 border bg-[#d20008] text-white text-md ml-3 font-bold rounded hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Berlangganan</button>
+            </form> 
+            {% if message == 'berhasil' %}
+              <p style="color: rgb(16 185 129);" class="text-xs italic">Selamat, Anda telah berlangganan dengan kami!</p>
+            {% elif message == 'error' %}
+              <p style="color: rgb(220 38 38);" class="text-xs italic">Format Email yang Anda masukkan salah!</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+  {% comment %} after footer mobile {% endcomment %}
+      <div style="background-image: url('{% static "image/public/bgAfterFooterPurpleSmall.svg" %}')" class="h-[720px] bg-center bg-cover bg-no-repeat md:hidden">
+        <div class="py-52 px-10">
+          <h1 class="text-4xl font-bold mb-4 text-[#333333]">Tetap Terhubung Bersama Kami</h1>
+          <p class="text-xl text-[#333333] mb-4">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
+          <div>
+            <form action="" method="POST">
+              {% csrf_token %}
+              {{form}}
+              <div class="mt-5">
+                <button type="submit" class="px-3 py-1 border bg-[#d20008] text-white text-md font-bold rounded hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Berlangganan</button>
+              </div>
+            </form> 
+            {% if message == 'berhasil' %}
+              <p style="color: rgb(16 185 129);" class="text-xs italic">Selamat, Anda telah berlangganan dengan kami!</p>
+            {% elif message == 'error' %}
+              <p style="color: rgb(220 38 38);" class="text-xs italic">Format Email yang Anda masukkan salah!</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      </div>
+{% endblock content %}

@@ -29,7 +29,7 @@ ALLOWED_HOSTS = [
 
     '127.0.0.1',
     'localhost',
-    # '18.141.230.246',
+    # '54.169.58.17',
     # 'keda.senja.co.uk',
 ]
 
@@ -37,6 +37,12 @@ INTERNAL_IPS = [
     "127.0.0.1",
     # "keda.senja.co.uk",
 ]
+
+AUTHENTICATION_BACKENDS = [
+   'django.contrib.auth.backends.ModelBackend',
+]
+SESSION_COOKIE_DOMAIN = None
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 

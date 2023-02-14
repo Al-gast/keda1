@@ -196,10 +196,8 @@ def detailBlog(request, slug_blog):
 
             form.save()
             form = SubscriptionForm()
-            blog = Blog.objects.select_related(
-                'blog_tag', 'blog_tag__color_id').get(slug_blog=slug_blog)
-            related_blogs = Blog.objects.select_related(
-                'blog_tag', 'blog_tag__color_id').exclude(id=slug_blog).order_by("?")[:4]
+            blog = Blog.objects.select_related('blog_tag', 'blog_tag__color_id').get(slug_blog=slug_blog)
+            related_blogs = Blog.objects.select_related('blog_tag', 'blog_tag__color_id').exclude(slug_blog=slug_blog).order_by("?")[:4]
             message = 'berhasil'
             context = {
                 'blog': blog,
@@ -526,7 +524,35 @@ def processNextSteps(request):
 
 
 def detailProject(request):
-    return render(request, 'detailProject.html')
+    if request.POST:
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form = SubscriptionForm()
+            message = "berhasil"
+            context = {
+                'form': form,
+                'message': message,
+            }
+            return render(request, 'detailProject.html', context)
+
+        else:
+            form = SubscriptionForm()
+            message = "error"
+            context = {
+                'form': form,
+                'message': message,
+            }
+            return render(request, 'detailProject.html', context)
+
+    else:
+        form = SubscriptionForm()
+        context = {
+            'form': form,
+        }
+        return render(request, 'detailProject.html', context)
+
+    
 
 def fourzerofour(request):
     return render(request, 'fourzerofour.html')

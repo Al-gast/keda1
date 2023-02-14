@@ -4,7 +4,7 @@
 {% block content %}
     <div>
       {% comment %} Profile Team {% endcomment %}
-        <div style="background-image: url('{% static "image/public/bgAboutStory.svg" %}')" class="hidden md:flex justify-center items-center h-[609px] bg-center bg-cover bg-no-repeat relative drop-shadow-lg">
+        <div style="background-image: url('{% static "image/public/bgAboutStory.svg" %}')" class="hidden md:flex justify-center items-center h-[609px] bg-center bg-cover bg-no-repeat z-40 relative drop-shadow-lg">
             <div class="">
                 <h1 class="text-7xl font-bold mb-7">Profil Tim KeDA Tech</h1>
                 <p class="text-2xl pl-12 text-gray-700 font-light">Sebagai salah satu Perusahaan Pengembang Teknologi Informasi yang berbasis di Jakarta, <br/>KeDA Tech berkomitmen untuk memenuhi semua kebutuhan sistem informasi dan solusi IT Anda. </p>
@@ -17,7 +17,7 @@
           </div>
       </div>
       <!-- Carousel Team -->
-        <div id="kedaTeam" class="carousel slide relative" data-bs-ride="carousel">
+        <div id="kedaTeam" class="carousel slide relative z-30" data-bs-ride="carousel">
           <div class="carousel-inner relative w-full overflow-hidden">
             {% for category in categories %}
             {% if forloop.first %}

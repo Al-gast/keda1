@@ -44,7 +44,9 @@ urlpatterns = [
     path('detail-technologies/', detailTechnologies, name='detail-technologies'),
     path('detail-mysql/', detailMysql, name='detail-mysql'),
     path('detail-python/', detailPython, name='detail-python/'),
-    path('detail-blog/(?P<slug_blog>[-a-zA-Z0-9_]+)\\Z', detailBlog, name='detail-blog'),
+    path('detail-blog/<slug:slug_blog>', detailBlog, name='detail-blog'),
+    # re_path(r'^detail-blog/(?P<slug_blog>[-a-zA-Z0-9_]+)\\Z', detailBlog, name='detail-blog'),
+    # path('detail-blog/(?P<slug_blog>[-a-zA-Z0-9_]+)\\Z', detailBlog, name='detail-blog'),
     path('project/', project, name='project'),
 
     path('detail-project/', detailProject, name='detail-project'),
